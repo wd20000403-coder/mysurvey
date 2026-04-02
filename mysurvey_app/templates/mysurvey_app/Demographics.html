@@ -1,0 +1,25 @@
+{{ block title }}
+Allgemeine Angaben
+{{ endblock }}
+
+{{ block content }}
+
+{{ include 'mysurvey_app/includes/styles.html' }}
+
+<div class="survey-container">
+    <div class="survey-title">Allgemeine Angaben</div>
+
+    <p class="survey-text">
+        Bitte beantworten Sie zunächst einige allgemeine Fragen.
+    </p>
+
+    <div class="question-box">
+        {{ formfields }}
+    </div>
+
+    <div class="next-btn-box">
+        {{ next_button }}
+    </div>
+</div>
+
+{{ endblock }}

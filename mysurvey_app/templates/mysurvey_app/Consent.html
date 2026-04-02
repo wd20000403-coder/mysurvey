@@ -1,0 +1,51 @@
+{{ block title }}
+Einverständniserklärung
+{{ endblock }}
+
+{{ block content }}
+
+{{ include 'mysurvey_app/includes/styles.html' }}
+
+<div class="survey-container">
+    <div class="survey-title">Einverständniserklärung</div>
+
+    <p class="survey-text">
+        Vielen Dank, dass Sie sich Zeit für meine Umfrage nehmen.
+    </p>
+
+    <p class="survey-text">
+        Diese Befragung ist Teil meiner Bachelorarbeit und untersucht, wie Menschen Unterschiede
+        in Leistungen und Ergebnissen in einem spielbezogenen Kontext wahrnehmen und bewerten.
+        Solche Wahrnehmungen spielen eine wichtige Rolle für wirtschaftliche und gesellschaftliche
+        Entscheidungsprozesse.
+    </p>
+
+    <p class="survey-text">
+        Dabei geht es insbesondere um Einschätzungen von Fairness sowie um die Unterstützung
+        möglicher Ausgleichsmechanismen.
+    </p>
+
+    <p class="survey-text">
+        Die Teilnahme ist freiwillig und dauert etwa 5–7 Minuten.
+    </p>
+
+    <p class="survey-text">
+        Alle erhobenen Daten werden anonym ausgewertet und ausschließlich zu wissenschaftlichen
+        Zwecken verwendet. Es werden keine personenbezogenen Daten gespeichert, die Rückschlüsse
+        auf Ihre Identität zulassen.
+    </p>
+
+    <p class="survey-text">
+        Mit dem Fortfahren bestätigen Sie, dass Sie freiwillig an der Studie teilnehmen.
+    </p>
+
+    <div class="question-box">
+        {{ formfields }}
+    </div>
+
+    <div class="next-btn-box">
+        {{ next_button }}
+    </div>
+</div>
+
+{{ endblock }}

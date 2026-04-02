@@ -1,0 +1,32 @@
+{{ block title }}
+Vielen Dank!
+{{ endblock }}
+
+{{ block content }}
+
+{{ include 'mysurvey_app/includes/styles.html' }}
+
+<div class="survey-container">
+    <div class="thankyou-box">
+        <div class="thankyou-title">Vielen Dank!</div>
+
+        <p class="thankyou-text">
+            Vielen Dank für Ihre Teilnahme an dieser Studie.
+        </p>
+
+        <p class="thankyou-text">
+            Ihre Antworten wurden erfolgreich übermittelt und werden ausschließlich anonym
+            für wissenschaftliche Zwecke im Rahmen meiner Bachelorarbeit ausgewertet.
+        </p>
+
+        <p class="thankyou-text">
+            Ihre Teilnahme trägt wesentlich zum Gelingen dieser Untersuchung bei.
+        </p>
+
+        <p class="thankyou-text">
+            Sie können das Browserfenster nun schließen.
+        </p>
+    </div>
+</div>
+
+{{ endblock }}

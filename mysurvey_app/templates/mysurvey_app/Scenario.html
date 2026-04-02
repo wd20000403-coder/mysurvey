@@ -1,0 +1,112 @@
+{{ block title }}
+Spielszenario
+{{ endblock }}
+
+{{ block content }}
+
+{{ include 'mysurvey_app/includes/styles.html' }}
+
+<div class="survey-container">
+    <div class="survey-title">Spielszenario</div>
+
+    <div class="scenario-box">
+        <div class="scenario-title">{{ scenario_title }}</div>
+        <div class="scenario-text">{{ scenario_text }}</div>
+    </div>
+
+    <div class="survey-subtitle">7.1 Wahrnehmung des Mechanismus</div>
+    <div class="question-box-single">
+        {{ formfield 'mechanism_main' }}
+    </div>
+
+    <hr class="section-divider">
+
+    <div class="survey-subtitle">7.2 Bitte geben Sie an, inwieweit Sie den folgenden Aussagen zustimmen</div>
+    <p class="likert-scale-note">
+        1 = stimme überhaupt nicht zu &nbsp;&nbsp;&nbsp; 5 = stimme voll und ganz zu
+    </p>
+
+    <table class="likert-table">
+        <tr>
+            <th class="likert-question">Aussage</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+        </tr>
+
+        <tr>
+            <td class="likert-question">Ich halte diese Art von Leistungsunterschieden für fair.</td>
+            {{ for choice in form.fairness_1 }}
+                <td class="radio-cell">{{ choice }}</td>
+            {{ endfor }}
+        </tr>
+
+        <tr>
+            <td class="likert-question">Die Vorteile stärkerer Spieler sind aus meiner Sicht „verdient“.</td>
+            {{ for choice in form.fairness_2 }}
+                <td class="radio-cell">{{ choice }}</td>
+            {{ endfor }}
+        </tr>
+
+        <tr>
+            <td class="likert-question">Dieses Spielsystem ist gegenüber durchschnittlichen Spielern unfair.</td>
+            {{ for choice in form.fairness_3 }}
+                <td class="radio-cell">{{ choice }}</td>
+            {{ endfor }}
+        </tr>
+    </table>
+
+    <hr class="section-divider">
+
+    <div class="survey-subtitle">7.3 Bitte geben Sie an, inwieweit Sie die folgenden Aussagen unterstützen</div>
+    <p class="likert-scale-note">
+        1 = unterstütze überhaupt nicht &nbsp;&nbsp;&nbsp; 5 = unterstütze voll und ganz
+    </p>
+
+    <table class="likert-table">
+        <tr>
+            <th class="likert-question">Aussage</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+        </tr>
+
+        <tr>
+            <td class="likert-question">Unterstützen Sie die durch dieses Spielsystem entstehenden Leistungsunterschiede?</td>
+            {{ for choice in form.support_1 }}
+                <td class="radio-cell">{{ choice }}</td>
+            {{ endfor }}
+        </tr>
+
+        <tr>
+            <td class="likert-question">Unterstützen Sie, dass stärkere Spieler aufgrund dieses Spielsystems Vorteile haben?</td>
+            {{ for choice in form.support_2 }}
+                <td class="radio-cell">{{ choice }}</td>
+            {{ endfor }}
+        </tr>
+
+        <tr>
+            <td class="likert-question">Unterstützen Sie dieses Spielsystem, obwohl es durchschnittliche Spieler benachteiligt?</td>
+            {{ for choice in form.support_3 }}
+                <td class="radio-cell">{{ choice }}</td>
+            {{ endfor }}
+        </tr>
+    </table>
+
+    <hr class="section-divider">
+
+    <div class="survey-subtitle">7.4 Rebalancing-Präferenz</div>
+    <div class="question-box-single">
+        {{ formfield 'rebalance' }}
+    </div>
+
+    <div class="next-btn-box">
+        {{ next_button }}
+    </div>
+</div>
+
+{{ endblock }}
